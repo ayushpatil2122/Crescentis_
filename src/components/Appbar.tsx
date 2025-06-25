@@ -17,7 +17,7 @@ export default function Appbar() {
         
         <div className="absolute lg:static bottom-[10vh] left-0 flex items-center justify-center w-full lg:w-auto">
           <div className="-translate-y-full opacity-0 flex items-center lg:translate-y-0 lg:opacity-100 transition-all duration-700 z-20">
-            <a href="https://calendly.com/d/cpdb-sg5-f8d">
+            <a href="/contact">
               <button 
                 className="relative py-2 px-4 lg:py-3 lg:px-5 border-2 rounded-full border-transparent group z-0" 
                 style={{
