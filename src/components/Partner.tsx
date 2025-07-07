@@ -34,7 +34,7 @@ export default function Partner() {
   ];
   
   // Function to get the first letter of brand name
-  const getInitial = (name) => {
+  const getInitial = (name :any) => {
     return name.charAt(0).toUpperCase();
   };
 
