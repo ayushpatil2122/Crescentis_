@@ -27,7 +27,7 @@ export default function Hero() {
 
                     {/* Tagline */}
                     <p className="text-white text-base lg:text-lg text-center max-w-[67ch] lg:max-w-[75ch] mb-8 font-dm-sans">
-                        The most powerful AI ever deployed in talent acquisition
+                        The most talented Marketing team
                     </p>
 
                     {/* CTA Button */}

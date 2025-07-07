@@ -4,44 +4,42 @@ import { useState, useEffect, useRef } from 'react';
 export default function Partner() {
   const partners = [
     {
-      logo: "https://www.noon.ai/_next/static/media/partners-logo-1.3e54dc1d.png",
-      name: "Warner Bros",
-      description: "How To Build Diverse Teams"
+      name: "Ramtek Agro Vision",
+      description: "Empowering Sustainable Farming"
     },
     {
-      logo: "/api/placeholder/120/60",
-      name: "Netflix",
-      description: "Creating Engaging Content"
+      name: "Shakoon Milk",
+      description: "Freshness Delivered Daily"
     },
     {
-      logo: "/api/placeholder/120/60",
-      name: "Google",
-      description: "Innovation at Scale"
+      name: "Appetite",
+      description: "Your Everyday Food Partner"
     },
     {
-      logo: "/api/placeholder/120/60",
-      name: "Adobe",
-      description: "Creative Solutions for All"
+      name: "TechBloom",
+      description: "Innovating the Future"
     },
     {
-      logo: "/api/placeholder/120/60",
-      name: "Amazon",
-      description: "Global Supply Chain Management"
+      name: "GreenNest",
+      description: "Eco-Friendly Home Solutions"
     },
     {
-      logo: "/api/placeholder/120/60",
-      name: "Microsoft",
-      description: "Enterprise Cloud Solutions"
+      name: "NovaHealth",
+      description: "Next-Gen Healthcare Access"
     },
     {
-      logo: "/api/placeholder/120/60",
-      name: "Apple",
-      description: "Design Excellence"
+      name: "UrbanHive",
+      description: "Smart Living Made Easy"
     }
   ];
+  
+  // Function to get the first letter of brand name
+  const getInitial = (name) => {
+    return name.charAt(0).toUpperCase();
+  };
 
   // Triple the array for infinite scroll effect
-  const carouselRef = useRef<HTMLDivElement>(null);
+  const carouselRef = useRef(null);
   const [isAnimating, setIsAnimating] = useState(true);
   const cardWidth = 330; // Width of each card in pixels
   const cardGap = 22; // Gap between cards (from ml-5.5 which is 22px)
@@ -52,8 +50,8 @@ export default function Partner() {
   
   // Auto-scroll logic
   useEffect(() => {
-    let interval: NodeJS.Timeout;
-    let animationFrameId: number = 0;
+    let interval;
+    let animationFrameId = 0;
     let currentPosition = 0;
     
     // Function to reset position without animation when reaching the end
@@ -113,10 +111,10 @@ export default function Partner() {
   }, [isAnimating]);
 
   return (
-    <section className=" lg:pt-20 lg:pb-9 bg-black">
+    <section className="lg:pt-20 lg:pb-9 bg-black">
       <div className="max-w mx-auto mb-10 overflow-hidden">
         <div className="relative overflow-hidden">
-        <div className="absolute left-0 top-0 h-full w-24 bg-gradient-to-r from-black to-transparent z-10"></div>
+          <div className="absolute left-0 top-0 h-full w-24 bg-gradient-to-r from-black to-transparent z-10"></div>
           <div className="overflow-hidden">
             <div 
               ref={carouselRef}
@@ -129,7 +127,14 @@ export default function Partner() {
                 <div key={index} className="ml-5.5 flex-shrink-0" style={{width: cardWidth + "px"}}>
                   <div className="relative w-full h-52 flex flex-col items-center justify-center p-8 rounded-[1.25rem] overflow-hidden border border-transparent ">
                     <img src="https://www.noon.ai/_next/static/media/partners-bg.338eeed9.png" alt="bg" className="absolute top-0 left-0 w-full h-full -z-10 object-cover"/>
-                    <img src={partner.logo} alt={partner.name} className="h-16 object-contain" />
+                    
+                    {/* Brand Initial Circle */}
+                    <div className="w-16 h-16 rounded-full  flex items-center justify-center shadow-lg">
+                      <span className="text-white text-2xl font-bold">
+                        {getInitial(partner.name)}
+                      </span>
+                    </div>
+                    
                     <p className="text-[1.375rem] mt-5 z-50 text-white font-medium">{partner.name}</p>
                     <p className="text-center font-light text-[#54565B] z-50 leading-tight text-sm xl:text-base">
                       {partner.description}

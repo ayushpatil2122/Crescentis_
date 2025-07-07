@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default function Appbar() {
     return (
-      <div className="absolute left-1/2 -translate-x-1/2 container flex items-start justify-between py-6 z-50 mx-auto">
+      <div className="absolute left-1/2 -translate-x-1/2 container flex items-start justify-between py-6 z-50 mx-auto pl-14 pr-14">
         <a href="/" className="flex items-center mt-2 z-50">
           <Image src="/logo.png" alt="Logo" className="mr-2" height={50} width={50}/>
           <span className="text-2xl leading-none mt-1.5">
@@ -17,7 +17,7 @@ export default function Appbar() {
         
         <div className="absolute lg:static bottom-[10vh] left-0 flex items-center justify-center w-full lg:w-auto">
           <div className="-translate-y-full opacity-0 flex items-center lg:translate-y-0 lg:opacity-100 transition-all duration-700 z-20">
-            <a href="https://calendly.com/d/cpdb-sg5-f8d">
+            <a href="https://wa.me/919423515112">
               <button 
                 className="relative py-2 px-4 lg:py-3 lg:px-5 border-2 rounded-full border-transparent group z-0" 
                 style={{
@@ -38,7 +38,7 @@ export default function Appbar() {
                 <div className="flex items-center text-sm lg:text-base text-nowrap z-20 bg-clip-text text-transparent bg-gradient-to-t from-white to-white/40">
                   <div className="absolute inset-0 w-full h-full rounded-full opacity-0 group-hover:opacity-100 bg-gradient-to-t from-white/10 to-black/0 transition-all duration-1000"></div>
                   <p className="bg-clip-text text-transparent bg-gradient-to-t from-white to-white/40 text-sm lg:text-base">
-                    Free Trial
+                    contact us
                   </p>  
                 </div>
               </button>

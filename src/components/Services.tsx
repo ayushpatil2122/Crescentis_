@@ -118,7 +118,7 @@ export default function Services() {
                                 loading="lazy" 
                             />
                             <img 
-                                src="https://eubzkoywhckxuyrjsrje.supabase.co/storage/v1/object/public/website/Item-2.png" 
+                                src="https://eubzkoywhckxuyrjsrje.supabase.co/storage/v1/object/public/website/Item-1.png" 
                                 alt="Block Item 2" 
                                 className="absolute top-[9%] right-0 w-[96%]" 
                                 loading="lazy" 
@@ -176,14 +176,14 @@ export default function Services() {
                         {/* Image Content */}
                         <div className="relative flex justify-center lg:justify-end py-8">
                             <img 
-                                src="https://eubzkoywhckxuyrjsrje.supabase.co/storage/v1/object/public/website/block-3.png" 
+                                src="https://eubzkoywhckxuyrjsrje.supabase.co/storage/v1/object/public/website/block-2.png" 
                                 alt="block" 
                                 className="w-full max-w-md" 
                                 loading="lazy" 
                             />
                             <img 
-                                src="https://eubzkoywhckxuyrjsrje.supabase.co/storage/v1/object/public/website/Item-3.png" 
-                                alt="Block Item 3" 
+                                src="https://eubzkoywhckxuyrjsrje.supabase.co/storage/v1/object/public/website/Item-1.png" 
+                                alt="Block Item 2" 
                                 className="absolute top-[9%] right-0 w-[96%]" 
                                 loading="lazy" 
                             />

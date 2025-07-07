@@ -10,7 +10,7 @@ export default function Navbar() {
                 </span>
             </a>
             <div className="flex justify-center items-center pr-7">
-                <a href="#" className="mr-6 hover:text-gray-500 transition-colors">Enter code</a>
+                <a href="#" className="mr-6 hover:text-gray-500 transition-colors">contact us</a>
                 <a href="#" className="hover:text-gray-500 transition-colors">Log in</a>
             </div>
         </div>

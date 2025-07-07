@@ -27,10 +27,10 @@ export default function Footer() {
           </span>
         </a>
         <a 
-          href="mailto:team@noon.ai" 
+          href="" 
           className="lg:absolute lg:left-1/2 lg:-translate-x-1/2 text-xs lg:text-sm text-white font-light"
         >
-          team@noon.ai
+          crescentis
         </a>
         <div 
           className="hidden lg:flex text-sm text-white font-light"
@@ -46,7 +46,7 @@ export default function Footer() {
         <p 
           className="text-center text-xs lg:text-sm text-white/50 font-light"
         >
-          All rights reserved | Portal 2023
+          All rights reserved | Portal 2025 
         </p>
       </div>
       

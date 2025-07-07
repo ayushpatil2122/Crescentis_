@@ -28,7 +28,7 @@ export default function SpaceThemeHero() {
           ))}
         </div>
       </div>
-      <div className="container max-w-3xl mx-auto px-4 relative z-10">
+      <div className="container max-w-3xl mx-auto px-4 relative z-10 mt-28">
         <div className="text-center">
           <h2 className="mb-6 text-4xl md:text-5xl lg:text-6xl font-medium leading-tight text-white">
             <span className="inline-block">Welcome to the era of</span>

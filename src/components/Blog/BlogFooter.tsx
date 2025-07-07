@@ -18,7 +18,7 @@ export default function BlogFooter() {
         <div className="flex justify-between w-[100%] px-52 pb-11">
             <div className="pr-40">
                 <a href="/" className="flex items-center">
-                    team@noon.ai
+                    crescentis
                 </a>
             </div>
             <div>
@@ -28,7 +28,7 @@ export default function BlogFooter() {
         <div className="flex justify-between w-[100%] px-52 pb-11">
             <div className="pr-40">
                 <a href="/" className="flex items-center">
-                All rights reserved | Portal 2022
+                All rights reserved | Portal 2025
                 </a>
             </div>
             <div>
