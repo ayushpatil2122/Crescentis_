@@ -39,7 +39,7 @@ export default function Partner() {
   };
 
   // Triple the array for infinite scroll effect
-  const carouselRef = useRef(null);
+  const carouselRef = useRef<HTMLDivElement>(null);
   const [isAnimating, setIsAnimating] = useState(true);
   const cardWidth = 330; // Width of each card in pixels
   const cardGap = 22; // Gap between cards (from ml-5.5 which is 22px)
@@ -50,7 +50,7 @@ export default function Partner() {
   
   // Auto-scroll logic
   useEffect(() => {
-    let interval;
+    let interval: ReturnType<typeof setInterval>;
     let animationFrameId = 0;
     let currentPosition = 0;
     
