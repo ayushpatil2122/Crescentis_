@@ -15,46 +15,25 @@ export default function Partner() {
       name: "Appetite",
       description: "Your Everyday Food Partner"
     },
-    {
-      name: "TechBloom",
-      description: "Innovating the Future"
-    },
-    {
-      name: "GreenNest",
-      description: "Eco-Friendly Home Solutions"
-    },
-    {
-      name: "NovaHealth",
-      description: "Next-Gen Healthcare Access"
-    },
-    {
-      name: "UrbanHive",
-      description: "Smart Living Made Easy"
-    }
   ];
   
-  // Function to get the first letter of brand name
   const getInitial = (name :any) => {
     return name.charAt(0).toUpperCase();
   };
 
-  // Triple the array for infinite scroll effect
   const carouselRef = useRef<HTMLDivElement>(null);
   const [isAnimating, setIsAnimating] = useState(true);
-  const cardWidth = 330; // Width of each card in pixels
-  const cardGap = 22; // Gap between cards (from ml-5.5 which is 22px)
+  const cardWidth = 330; 
+  const cardGap = 22;
   const slideWidth = cardWidth + cardGap;
   
-  // Create three copies of partners for smooth infinite sliding
   const allPartners = [...partners, ...partners, ...partners];
   
-  // Auto-scroll logic
   useEffect(() => {
     let interval: ReturnType<typeof setInterval>;
     let animationFrameId = 0;
     let currentPosition = 0;
     
-    // Function to reset position without animation when reaching the end
     const resetPosition = () => {
       if (carouselRef.current) {
         setIsAnimating(false);
@@ -62,7 +41,6 @@ export default function Partner() {
         currentPosition = partners.length * slideWidth;
         carouselRef.current.style.transform = `translateX(-${currentPosition}px)`;
         
-        // Force browser to acknowledge the style change before re-enabling transitions
         setTimeout(() => {
           if (carouselRef.current) {
             carouselRef.current.style.transition = 'transform 800ms ease-in-out';
@@ -72,7 +50,6 @@ export default function Partner() {
       }
     };
     
-    // Start animation
     const startAnimation = () => {
       interval = setInterval(() => {
         if (!carouselRef.current) return;
@@ -80,14 +57,12 @@ export default function Partner() {
         currentPosition += slideWidth;
         carouselRef.current.style.transform = `translateX(-${currentPosition}px)`;
         
-        // Check if we need to reset position
         if (currentPosition >= (partners.length * 2 * slideWidth)) {
-          setTimeout(resetPosition, 800); // Reset after transition completes
+          setTimeout(resetPosition, 800);
         }
       }, 3000);
     };
     
-    // Initialize position at the middle set of cards
     if (carouselRef.current) {
       currentPosition = partners.length * slideWidth;
       carouselRef.current.style.transform = `translateX(-${currentPosition}px)`;
@@ -101,7 +76,6 @@ export default function Partner() {
     };
   }, [partners.length, slideWidth]);
   
-  // Handle transition enabling/disabling
   useEffect(() => {
     if (carouselRef.current) {
       carouselRef.current.style.transition = isAnimating 
@@ -128,7 +102,6 @@ export default function Partner() {
                   <div className="relative w-full h-52 flex flex-col items-center justify-center p-8 rounded-[1.25rem] overflow-hidden border border-transparent ">
                     <img src="https://www.noon.ai/_next/static/media/partners-bg.338eeed9.png" alt="bg" className="absolute top-0 left-0 w-full h-full -z-10 object-cover"/>
                     
-                    {/* Brand Initial Circle */}
                     <div className="w-16 h-16 rounded-full  flex items-center justify-center shadow-lg">
                       <span className="text-white text-2xl font-bold">
                         {getInitial(partner.name)}

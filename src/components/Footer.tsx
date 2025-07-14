@@ -36,8 +36,8 @@ export default function Footer() {
           className="hidden lg:flex text-sm text-white font-light"
         >
           <a href="/blog" className="mr-7">Blog</a>
-          <a href="/terms" className="mr-7">Terms and Conditions</a>
-          <a href="/privacy">Privacy Policy</a>
+          <a href="/terms-and-conditions" className="mr-7">Terms and Conditions</a>
+          <a href="/policy">Privacy Policy</a>
         </div>
       </div>
       
